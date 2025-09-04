@@ -4,6 +4,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite,
 		C3.Plugins.Touch,
 		C3.Plugins.Text,
+		C3.Plugins.Browser,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Touch.Exps.XAt,
@@ -29,7 +30,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetFontSize,
 		C3.Plugins.Text.Acts.SetFontColor,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
-		C3.Plugins.System.Acts.GoToLayoutByName
+		C3.Plugins.System.Acts.GoToLayoutByName,
+		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
+		C3.Plugins.System.Acts.SetFullscreenQuality,
+		C3.Plugins.Browser.Acts.RequestFullScreen
 	];
 };
 self.C3_JsPropNameTable = [
@@ -44,9 +48,8 @@ self.C3_JsPropNameTable = [
 	{Sprite: 0},
 	{BaslaTarget: 0},
 	{Giris: 0},
-	{Sprite2: 0},
-	{Sprite3: 0},
-	{Sprite4: 0},
+	{Tarayıcı: 0},
+	{fullscreen: 0},
 	{CameraX: 0},
 	{CameraY: 0},
 	{Zoom: 0},
@@ -80,7 +83,6 @@ self.InstanceType = {
 	Sprite: class extends self.ISpriteInstance {},
 	BaslaTarget: class extends self.ISpriteInstance {},
 	Giris: class extends self.ISpriteInstance {},
-	Sprite2: class extends self.ISpriteInstance {},
-	Sprite3: class extends self.ISpriteInstance {},
-	Sprite4: class extends self.ISpriteInstance {}
+	Tarayıcı: class extends self.IInstance {},
+	fullscreen: class extends self.ISpriteInstance {}
 }
